@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Bootstrap Responsif</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- 1. NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><i class="fas fa-graduation-cap"></i>Student Dashboard</a
+        >
+        <button
+          class="navbar-dark navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2. KONTEN UTAMA (MAIN) -->
+    <main class="container my-5">
+      <div class="card shadow-sm">
+        <!-- 3. JUDUL & INPUT SEARCH (DALAM SATU HEADER TABEL) -->
+        <div class="card-header bg-white py-3">
+          <div class="row align-items-center g-2">
+            <!-- Judul di sebelah kiri -->
+            <div class="col-sm-6 text-center text-sm-start">
+              <h5 class="mb-0 text-dark fw-bold">Daftar Nilai Siswa</h5>
+            </div>
+            <!-- Input Search di sebelah kanan judul -->
+            <div class="col-sm-6 col-md-4 ms-auto">
+              <form class="d-flex" role="search" id="filter">
+                <input
+                  class="form-control form-control-sm"
+                  type="search"
+                  placeholder="Cari data..."
+                  aria-label="Search"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. TABEL ADAPTABLE / RESPONSIF -->
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Kelas</th>
+                <th scope="col">Score</th>
+              </tr>
+            </thead>
+            <tbody id="listMurid"></tbody>
+            <!-- TAMBAHKAN FOOTER TABEL DI BAWAH INI -->
+            <tfoot class="table-secondary fw-bold">
+              <tr>
+                <td colspan="3" class="text-end">Rata-rata Nilai:</td>
+                <td id="totalNilai">0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap 5 JS Bundle (Termasuk Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
